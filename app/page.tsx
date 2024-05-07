@@ -8,7 +8,7 @@ import { Label, Textarea, Card, Spinner, Modal } from "flowbite-react"
 
 const openai = new OpenAI();
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY ?? "";
 
 openai.apiKey = OPENAI_API_KEY;
 
