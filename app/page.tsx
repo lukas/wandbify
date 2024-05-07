@@ -6,11 +6,11 @@ import { useState } from "react";
 import { Button } from "flowbite-react";
 import { Label, Textarea, Card, Spinner, Modal } from "flowbite-react"
 
-const openai = new OpenAI();
-
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY ?? "";
+const openai = new OpenAI({ apiKey: OPENAI_API_KEY, dangerouslyAllowBrowser: true });
 
-openai.apiKey = OPENAI_API_KEY;
+
+
 
 let response: string = ''
 const defaultBrandGuidelines = `
